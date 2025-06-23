@@ -1,0 +1,41 @@
+<div *ngIf="note || editMode" class="note-detail">
+  <form *ngIf="editMode" (ngSubmit)="saveEdit()" autocomplete="off">
+    <input
+      class="note-input-title"
+      name="title"
+      maxlength="64"
+      placeholder="Title"
+      [(ngModel)]="editableNote.title"
+      autofocus
+      required
+    />
+    <textarea
+      class="note-input-content"
+      name="content"
+      rows="8"
+      placeholder="Type your note..."
+      [(ngModel)]="editableNote.content"
+      required
+    ></textarea>
+    <div class="actions">
+      <button type="submit" class="btn primary">{{ note ? 'Save' : 'Create' }}</button>
+      <button type="button" class="btn secondary" (click)="cancel.emit()">Cancel</button>
+      <button
+        *ngIf="note"
+        type="button"
+        class="btn danger"
+        (click)="delete.emit()"
+      >Delete</button>
+    </div>
+  </form>
+  <div *ngIf="!editMode && note" class="detail-view">
+    <div class="detail-title">{{ note.title }}</div>
+    <div class="detail-time">{{ note.updatedAt | date:'medium' }}</div>
+    <div class="detail-content">{{ note.content }}</div>
+    <div class="actions">
+      <button type="button" class="btn primary" (click)="editMode = true">Edit</button>
+      <button type="button" class="btn secondary" (click)="cancel.emit()">Back</button>
+      <button type="button" class="btn danger" (click)="delete.emit()">Delete</button>
+    </div>
+  </div>
+</div>

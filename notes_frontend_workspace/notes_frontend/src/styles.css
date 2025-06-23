@@ -1,0 +1,38 @@
+:root {
+  --color-primary: #1976d2;
+  --color-secondary: #90caf9;
+  --color-accent: #ffb300;
+  --bg-main: #f8fbff;
+  --border-main: #eaeff4;
+  --text-main: #222;
+  --text-light: #7f858c;
+}
+html,
+body {
+  background: var(--bg-main);
+  color: var(--text-main);
+  min-height: 100%;
+  font-family: "Inter", "Segoe UI", Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-primary);
+}
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+::-webkit-scrollbar {
+  width: 8px;
+  background: #dbeaff;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--color-secondary);
+  border-radius: 8px;
+}

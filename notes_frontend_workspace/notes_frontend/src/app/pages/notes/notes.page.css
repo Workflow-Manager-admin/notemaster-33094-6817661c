@@ -1,0 +1,35 @@
+.notes-layout {
+  width: 100%;
+  margin: 2.9rem auto 0 auto;
+  display: flex;
+  gap: 2.3rem;
+  max-width: 980px;
+  min-height: 70vh;
+  align-items: flex-start;
+  position: relative;
+}
+.notes-list-col {
+  min-width: 270px;
+  max-width: 350px;
+  flex: 1 0 270px;
+}
+.note-detail-col {
+  flex: 3 1 0;
+  max-width: 650px;
+}
+
+.notes-list-col.hide {
+  display: none;
+}
+@media (max-width: 900px) {
+  .notes-layout {
+    flex-direction: column;
+    max-width: 98vw;
+    gap: 0.6rem;
+  }
+  .notes-list-col,
+  .note-detail-col {
+    max-width: 100vw;
+    min-width: unset;
+  }
+}

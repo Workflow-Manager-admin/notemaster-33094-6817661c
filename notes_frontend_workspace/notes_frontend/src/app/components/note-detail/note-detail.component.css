@@ -1,0 +1,110 @@
+.note-detail {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 1px 10px 0 rgba(25, 118, 210, 0.09);
+  border: 1px solid #edf2fa;
+  padding: 2rem 2rem 1.2rem 2rem;
+  min-width: 260px;
+  max-width: 540px;
+  margin: 0 auto;
+}
+
+.note-input-title, .note-input-content, .detail-title, .detail-content {
+  width: 100%;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1.15rem;
+  margin-bottom: 1.3rem;
+  border-radius: 6px;
+  background: #f6fafd;
+  color: #333;
+}
+
+.note-input-title {
+  font-weight: 600;
+  font-size: 1.28rem;
+  margin-top: 0.2rem;
+}
+
+.note-input-content {
+  min-height: 110px;
+  font-size: 1.07rem;
+  resize: vertical;
+}
+
+.detail-title {
+  font-weight: 700;
+  font-size: 1.44rem;
+  margin-bottom: 0.72rem;
+  color: #1976d2;
+}
+
+.detail-content {
+  font-size: 1.04rem;
+  line-height: 1.6;
+  margin-bottom: 1.4rem;
+}
+
+.detail-time {
+  color: #90caf9;
+  font-size: 0.91rem;
+  margin-bottom: 0.89rem;
+  font-weight: 400;
+}
+
+.actions {
+  display: flex;
+  gap: 0.8rem;
+  margin-bottom: 0.1rem;
+}
+
+.btn {
+  border: none;
+  padding: 0.54rem 1.13rem;
+  border-radius: 6px;
+  font-size: 1.01rem;
+  font-weight: 600;
+  transition: background 0.18s, color 0.18s;
+  cursor: pointer;
+  outline: none;
+}
+
+.btn.primary {
+  background: #1976d2;
+  color: #fff;
+}
+
+.btn.primary:hover {
+  background: #1565c0;
+}
+
+.btn.secondary {
+  background: #e3f2fd;
+  color: #1976d2;
+}
+
+.btn.secondary:hover {
+  background: #bbdefb;
+}
+
+.btn.danger {
+  background: #ffb300;
+  color: #fff;
+}
+
+.btn.danger:hover {
+  background: #ffa000;
+}
+
+/* Responsive layout for mobile */
+@media (max-width: 480px) {
+  .note-detail {
+    padding: 1.1rem 0.45rem 0.8rem 0.45rem;
+    min-width: auto;
+    max-width: 100vw;
+  }
+  .btn {
+    font-size: 0.97rem;
+    padding: 0.52rem 1rem;
+  }
+}

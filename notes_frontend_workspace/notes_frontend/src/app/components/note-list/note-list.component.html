@@ -1,0 +1,12 @@
+<div class="notes-list">
+  <ng-container *ngIf="notes.length > 0; else empty">
+    <div class="note-card" *ngFor="let note of notes" (click)="select.emit(note)">
+      <div class="note-title">{{ note.title || 'Untitled' }}</div>
+      <div class="note-snippet">{{ note.content | slice:0:60 }}</div>
+      <span class="note-date">{{ note.updatedAt | date:'short' }}</span>
+    </div>
+  </ng-container>
+  <ng-template #empty>
+    <div class="empty-state">No notes yet. Create one!</div>
+  </ng-template>
+</div>

@@ -1,0 +1,4 @@
+{
+    "command": "npm install && npm run build",
+    "working_directory": "/home/kavia/workspace/code-generation/notemaster-33094-6817661c/notes_frontend_workspace/notes_frontend"
+}

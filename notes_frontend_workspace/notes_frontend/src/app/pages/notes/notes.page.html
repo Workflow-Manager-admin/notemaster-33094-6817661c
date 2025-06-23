@@ -1,0 +1,24 @@
+<div class="notes-layout">
+  <div
+    class="notes-list-col"
+    [class.hide]="selectedNote || createMode || editMode"
+  >
+    <app-note-list
+      [notes]="notes"
+      (select)="onNoteSelect($event)"
+    ></app-note-list>
+  </div>
+  <div
+    class="note-detail-col"
+    *ngIf="selectedNote || createMode || editMode"
+  >
+    <app-note-detail
+      [note]="selectedNote"
+      [editMode]="createMode || editMode"
+      (save)="saveNote($event)"
+      (delete)="deleteNote()"
+      (cancel)="cancelDetail()"
+    ></app-note-detail>
+  </div>
+</div>
+<app-fab (clicked)="onFabClick()" />
